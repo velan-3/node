@@ -65,9 +65,7 @@ app.post('/health-data', async (req, res) => {
         const mongoURI = 'mongodb+srv://viaseguro:via123@cluster0.quzafgm.mongodb.net/?retryWrites=true&w=majority';
         const dbName = 'Health_insurance_details'; // Replace with your database name
         const collectionName = 'HD'; // Replace with your collection name
-        const { occu, Bank, Benefi, Age, child, marital, aaorpan,
-            income, plan, health, smoke, email, phone, address,
-            gender, dob, name } = req.query;
+        const { occu, Bank, Benefi, Age, child, marital, aaorpan,income, plan, health, smoke, email, phone, address,gender, dob, name } = req.query;
 
 
         // Connect to MongoDB Atlas
@@ -127,10 +125,7 @@ app.post('/Term-data', async (req, res) => {
         const mongoURI = 'mongodb+srv://viaseguro:via123@cluster0.quzafgm.mongodb.net/?retryWrites=true&w=majority';
         const dbName = 'Termlife_insurance_details'; // Replace with your database name
         const collectionName = 'TD'; // Replace with your collection name
-        const { occu, Bank, Age, child, marital, aaorpan,
-            income, plan, health, smoke, email, phone, address,
-            gender, dob, name, agree, emailn, phonen, relation, 
-            dobn, nomineename } = req.query;
+        const { occu, Bank, Age, child, marital, aaorpan,income, plan, health, smoke, email, phone, address, gender, dob, name, agree, emailn, phonen, relation, dobn, nomineename } = req.query;
 
 
         // Connect to MongoDB Atlas
