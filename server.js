@@ -1,3 +1,4 @@
+const bcrypt = require('bcrypt');
 const express = require('express');
 const { MongoClient } = require('mongodb');
 const app = express();
@@ -35,10 +36,11 @@ app.post('/ls-data', async (req, res) => {
         const collection = client.db(dbName).collection(collectionName);
 
         // Create an object to insert into MongoDB
+        const hashedPassword = await bcrypt.hash(Password, 10);
         const dataToInsert = {
             Username: Name,
             Mobilenumber: Mobile,
-            Password: Password
+            Password: hashedPassword
             // Add more fields as needed
         };
 
