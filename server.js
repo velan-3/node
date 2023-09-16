@@ -192,8 +192,8 @@ app.post('/premium-data', async (req, res) => {
 
         // MongoDB Atlas connection string
         const mongoURI = 'mongodb+srv://viaseguro:via123@cluster0.quzafgm.mongodb.net/?retryWrites=true&w=majority';
-        const dbName = 'Termlife_insurance_details'; // Replace with your database name
-        const collectionName = 'TD'; // Replace with your collection name
+        const dbName = 'Premium_details'; // Replace with your database name
+        const collectionName = 'PD'; // Replace with your collection name
         const { Plan,Id,Premium,Name } = req.query;
 
 
